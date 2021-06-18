@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #0A0C1C;
+}
+
+h1, h2{
+    font-weight:  700;
+}
+
+section{
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+
+#main{
+    margin: 0 auto;
+    position: relative;
+    max-width: 1110px;
+    height: 446px;
+    display: flex;
+}
+
+.left-side{
+    background-color: #1B1937;
+    border-radius: 8px 0px 0px 8px;
+    color: #fff;
+    text-align: center;
+    min-width: 570px;
+    padding: 71px;
+}
+
+.left-content{
+    max-width: 403px;
+}
+
+.text{
+    max-width: 403px;
+    margin: 0 auto;
+}
+
+.text h1, .text p{
+    text-align: start;
+}
+
+.text h1{
+    margin-bottom: 25px;
+    line-height: 44px;
+    font-size: 36px;
+}
+
+.text h1 span{
+    color: #AB5CDB;
+}
+
+.text p{
+    margin-bottom: 72px;
+    line-height: 25px;
+    font-size: 15px;
+    opacity: 0.75;
+    max-width: 374px;
+}
+
+.informations{
+    display: flex;
+    text-align: center;
+    justify-content:space-between;
+    margin-right: 47px;
+}
+
+.informations h2{
+    text-align: start;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.informations p{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    margin-top: 12px;
+}
+
+.right-side{
+    flex: 1;
+    background-image: url("./images/image-header-desktop.jpg");
+    background-color: rgba(171, 92, 219, 1);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 8px 8px 0px;
+}
+
+/* MEDIA QUERIES*/
+
+@media (max-width: 920px){
+    #main{
+        flex-direction: column;
+        max-width: 327px;
+        height: 780px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .left-side{
+        padding: 32px 31px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .text h1, .text p{
+        text-align: center;
+    }
+
+    .text h1{
+        font-size: 28px;
+    }
+
+    .text p{
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
+    .left-side{
+        order: 0;
+        flex-direction: column;
+        min-width: 327px;  
+    }
+
+    .informations{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .informations > div{
+        margin: 0px auto 24px auto;
+    }
+
+    .informations h2{
+        text-align: center;
+    }
+
+    .right-side{
+        background-image: url(./images/image-header-mobile.jpg);
+        order: -1;
+        border-radius: 8px 8px 0 0;
+        height: 240px;
+    }
+}
